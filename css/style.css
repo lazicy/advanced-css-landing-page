@@ -23,11 +23,166 @@ body {
 }
 
 .header {
-    height: 95vh;
+    height: 93vh;
     background-image: linear-gradient(to right bottom,
-                      #076de0c4,#15a8a1c4),
-                      url('../img/hero.jpg');
+                      #076ce0d2,#15a8a1d2),
+                      url('../img/paravan.jpg');
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 50% 100%, 0 75vh);
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.logo {
+    height: 130px;
+}
+
+.text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 65px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 12px;
+    font-weight: 400;
+
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+
+    80% {
+        transform: translate(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translate(100px);
+    }
+
+    80% {
+        transform: translate(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    position: relative;
+
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+
+}
+
+.btn:hover::after {
+    transform: scale(2);
+    opacity: 0;
+
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;  
 }
