@@ -56,14 +56,14 @@ body {
     text-transform: uppercase;
 
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 65px;
+    font-size: 80px;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 30px;
 
     animation-name: moveInLeft;
     animation-duration: 2s;
@@ -74,12 +74,13 @@ body {
 .heading-primary-sub {
     display: block;
     font-size: 16px;
-    letter-spacing: 12px;
+    letter-spacing: 13.6px;
     font-weight: 400;
 
     animation-name: moveInRight;
     animation-duration: 2s;
     animation-timing-function: ease-out;
+    padding-right: 20px;
 }
 
 @keyframes moveInLeft {
@@ -135,8 +136,8 @@ body {
 .btn:active {
     transform: translateY(-1px);
     box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
-
 }
+
 
 .btn-white {
     background-color: #fff;
