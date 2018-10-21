@@ -1,0 +1,19 @@
+{
+  "name": "advanced-css-landing-page",
+  "version": "1.0.0",
+  "description": "Neuron landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazicy/advanced-css-landing-page.git"
+  },
+  "author": "Milan Lazic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazicy/advanced-css-landing-page/issues"
+  },
+  "homepage": "https://github.com/lazicy/advanced-css-landing-page#readme"
+}
