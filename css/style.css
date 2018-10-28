@@ -73,6 +73,10 @@ body {
     animation-duration: 2s;
     animation-timing-function: ease-out;
     padding-right: 2rem; }
+  .heading-primary > *:hover {
+    transform: scale(1.02);
+    transition: transform 3s;
+    cursor: default; }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -171,6 +175,53 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0px); }
 
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    transition: all .2s;
+    outline-offset: 0.6rem;
+    background-color: #000; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1rem solid #0038a1;
+      transform: scale(1.08);
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.35);
+      z-index: 2; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9);
+    opacity: 0.7; }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all .3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #15a8a1, #0038a1);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.2rem) scale(1.03); }
+
 .header {
   height: 93vh;
   background-image: linear-gradient(to right bottom, rgba(7, 108, 224, 0.8), rgba(21, 168, 161, 0.8)), url("../img/paravan.jpg");
@@ -195,7 +246,7 @@ body {
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
-    margin-bottom: 8rem; }
+    margin-bottom: 11rem; }
   .row::after {
     content: "";
     display: table;
@@ -221,3 +272,12 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+
+.section-features {
+  padding: 18rem  0;
+  background-image: linear-gradient(to right bottom, rgba(7, 108, 224, 0.8), rgba(21, 168, 161, 0.8)), url("../img/paravan.jpg");
+  background-size: cover;
+  margin-top: -10rem;
+  transform: skewY(-5deg); }
+  .section-features > * {
+    transform: skewY(5deg); }
