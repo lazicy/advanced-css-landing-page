@@ -13,16 +13,20 @@ body {
     backface-visibility: hidden;
     margin-bottom: 7rem;
 
+    
     &--main {
         display: block;
         font-size: 8rem;
         font-weight: 400;
-        letter-spacing: 3rem;
+        letter-spacing: 1.5rem;
 
         animation-name: moveInLeft;
         animation-duration: 2s;
         animation-timing-function: ease-out;
 
+        
+
+       
     }
 
     &--sub {
@@ -38,6 +42,13 @@ body {
 
     }
 
+    & > *:hover {
+        transform: scale(1.02);
+        transition: transform 3s;
+        cursor: default;
+     }
+ 
+
 }
 
 .heading-secondary {
@@ -45,7 +56,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary);
     -webkit-background-clip: text;
     color: transparent;
     transition: all 1s;
